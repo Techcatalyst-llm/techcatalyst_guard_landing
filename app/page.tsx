@@ -10,6 +10,7 @@ import Roles from "@/components/Roles";
 import Clients from "@/components/Clients";
 import Team from "@/components/Team";
 import Assurance from "@/components/Assurance";
+import Roadmap from "@/components/Roadmap";
 import Pilot from "@/components/Pilot";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
@@ -30,6 +31,7 @@ export default function Home() {
         <Clients />
         <Team />
         <Assurance />
+        <Roadmap />
         <Pilot />
         <Faq />
       </main>
