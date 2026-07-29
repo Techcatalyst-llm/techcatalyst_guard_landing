@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guard.techcatalyst.ru/sitemap.xml
+Host: guard.techcatalyst.ru
