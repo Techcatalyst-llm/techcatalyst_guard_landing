@@ -18,9 +18,6 @@ export default function Footer() {
           <a href="mailto:tanya@ai-guard.pro" className="text-navy-text transition-colors hover:text-[#aab8ff]">
             tanya@ai-guard.pro
           </a>
-          <a href="https://t.me/pillardev" target="_blank" rel="noreferrer" className="text-navy-text transition-colors hover:text-[#aab8ff]">
-            Telegram
-          </a>
           <a href="https://ai-guard.pro/privacy" className="text-navy-text transition-colors hover:text-[#aab8ff]">
             Privacy policy
           </a>

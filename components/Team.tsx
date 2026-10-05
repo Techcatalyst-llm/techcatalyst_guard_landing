@@ -37,7 +37,7 @@ export default function Team() {
                 Founder
               </div>
               <h3 className="text-[28px] font-semibold tracking-[-.02em] text-[#0d1326]">
-                Ivan Borisov
+                Tanya Farberg
               </h3>
               <p className="mt-4 max-w-[720px] text-[16px] leading-8 text-muted">
                 Founder of AI Guard. Leads product, architecture and pilot
@@ -51,16 +51,8 @@ export default function Team() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href="https://www.linkedin.com/in/borisov-ivan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-[10px] bg-blue px-6 py-3 text-[14.5px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
-                >
-                  Founder profile
-                </a>
-                <a
                   href="#pilot"
-                  className="inline-flex items-center rounded-[10px] border border-line bg-white px-6 py-3 text-[14.5px] font-semibold text-ink transition-colors hover:border-blue hover:text-blue"
+                  className="inline-flex items-center rounded-[10px] bg-blue px-6 py-3 text-[14.5px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
                 >
                   Discuss a pilot
                 </a>
