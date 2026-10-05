@@ -13,5 +13,5 @@
 
 ## 3. Deployment
 
-- [ ] Start the isolated PM2 process and HTTPS virtual host.
-- [ ] Verify public HTTPS delivery.
+- [x] Start the isolated PM2 process and HTTPS virtual host.
+- [x] Verify public HTTPS delivery.
