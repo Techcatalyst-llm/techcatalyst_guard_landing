@@ -3,31 +3,31 @@ import Reveal from "./Reveal";
 
 const blocks = [
   {
-    title: "Серверная часть",
+    title: "Server stack",
     tag: null,
-    text: "Docker Compose, PostgreSQL и обратный прокси-сервер. Интерфейсы проверки состояния и готовности, структурированные журналы, выгрузка в Loki, документированное резервное копирование и восстановление.",
+    text: "Docker Compose, PostgreSQL and a reverse proxy. Health-check and readiness endpoints, structured logs, Loki export, documented backup and restore procedures.",
   },
   {
-    title: "Раскатка агентов",
+    title: "Agent rollout",
     tag: null,
-    text: "Пакеты для macOS и Linux; Windows и PowerShell — целевой срок: IV квартал 2026 года. Развёртывание через MDM или систему управления ПО, автоматическая настройка командной оболочки и запуска агента.",
+    text: "Packages for macOS and Linux; Windows and PowerShell targeted for Q4 2026. Deployment via MDM or software management, automatic shell integration and agent startup.",
   },
   {
-    title: "Масштаб",
+    title: "Scale",
     tag: null,
-    text: "От пробного стенда до парка в 500–1500 рабочих станций. Документированный расчёт ресурсов, схема масштабирования и рекомендации по высокой доступности рабочего контура.",
+    text: "From a pilot stand to a fleet of 500–1,500 workstations. Documented resource sizing, scaling architecture and high-availability recommendations for the production perimeter.",
   },
   {
-    title: "Интеграции",
-    tag: "план развития",
-    text: "Единый вход и группы AD с управлением жизненным циклом, выгрузка событий в SIEM и Grafana с оповещениями, поставка через Kubernetes и Helm, режим Guard для внешних агентских систем.",
+    title: "Integrations",
+    tag: "roadmap",
+    text: "SSO and AD groups with lifecycle management, event export to SIEM and Grafana with alerting, Kubernetes and Helm delivery, Guard mode for external agent frameworks.",
   },
 ];
 
 const stack = [
   "docker compose",
   "postgresql",
-  "подписанные версии политик",
+  "signed policy versions",
   "zsh / bash / PowerShell",
   "macOS / Linux",
 ];
@@ -37,10 +37,10 @@ export default function Deploy() {
     <section id="deploy" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Развёртывание</Kicker>
-          <H2>Полностью в вашем контуре</H2>
+          <Kicker>Deployment</Kicker>
+          <H2>Fully on-premises</H2>
           <Lead>
-            Серверная часть и данные полностью размещаются в инфраструктуре компании.
+            Server stack and data are deployed entirely within your infrastructure.
           </Lead>
         </Reveal>
         <div className="mt-11 grid grid-cols-2 gap-5 max-md:grid-cols-1">

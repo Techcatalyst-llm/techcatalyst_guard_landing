@@ -1,34 +1,34 @@
-# Techcatalyst Guard Landing — Project Instructions
+# AI Guard Landing — Project Instructions
 
 ## Project Overview
 
-Маркетинговый лендинг Techcatalyst Guard (workstation AI-DLP). Next.js App Router + Tailwind. Репозиторий продаёт продукт; поведение продукта спекается в techcatalyst_guard — маркетинговые утверждения не должны выходить за пределы specs/compliance-map.md того репо.
+Marketing landing for AI Guard (workstation AI-DLP). Next.js App Router + Tailwind. The repository sells the product; product behaviour is specced in the product repository — marketing claims must not exceed what the specs document.
 
 ## Spec-Driven Development (OpenSpec)
 
-- `specs/` — source of truth: что система делает сейчас (`specs/project.md`, capability-спеки: Requirements/Scenarios/Implementation/Verification).
-- `changes/` — что меняем дальше и почему: 4 фазы explore → propose → apply → archive (`changes/README.md`).
-- Никакого изменения поведения без change-артефакта; коммиты атрибутируются `[<change-id>] <summary>` + строка `Change: <change-id>` в теле. Без артефакта — `[no-change]` с обоснованием.
-- Для инициатив из триггер-листа (фича, workflow change, automation effort, enterprise requirement, значимая UI/backend задача) Product Squad discovery обязателен ДО propose.
+- `specs/` — source of truth: what the system does today (`specs/project.md`, capability specs: Requirements/Scenarios/Implementation/Verification).
+- `changes/` — what we change next and why: 4 phases explore → propose → apply → archive (`changes/README.md`).
+- No behaviour change without a change artifact; commits attributed `[<change-id>] <summary>` + `Change: <change-id>` line in body. Without artifact — `[no-change]` with justification.
+- For trigger-list initiatives (feature, workflow change, automation effort, enterprise requirement, significant UI/backend task) Product Squad discovery is mandatory before propose.
 
 ## Agent Skills (5-skill workflow)
 
-5 скилов склонированы в корень (каждый — отдельный git-репо с remote в `Techcatalyst-llm`):
+5 skills cloned to root (each a separate git repo):
 
-- `.cto-skill/` — делает (реализация, архитектурные решения). Начало сессии: читать `.cto-skill/SKILL.md`; значимые решения/контекст писать в `.cto-skill/data/` и сразу коммитить+пушить оттуда.
-- `.qa-skill/` — независимая верификация против спеки после каждого CTO-этапа. Вердикты: verified / with-bugs / not-implemented / needs-testing / ambiguous-spec. Gate PASS/FAIL; critical/high дефекты не проходят. Отчёты в `.qa-skill/data/verifications/`, дефекты в `.qa-skill/data/defects/`.
-- `.product-squad-skill/` — что строим, для кого и зачем. Обязательный SDD Opportunity Research Subcycle перед propose для инициатив из триггер-листа (`templates/sdd-opportunity-research.md` → `data/research/`).
-- `.orchestrator-skill/` — секвенсор этапов, handoffs, состояние в `.orchestrator-skill/data/state/` (читать первым).
-- `.security-engineer-skill/` — security-верификация enterprise-уровня; может блокировать релиз на critical/high.
+- `.cto-skill/` — implementation and architecture decisions. Session start: read `.cto-skill/SKILL.md`; significant decisions/context written to `.cto-skill/data/` and committed+pushed immediately.
+- `.qa-skill/` — independent verification against spec after each CTO stage. Verdicts: verified / with-bugs / not-implemented / needs-testing / ambiguous-spec. Gate PASS/FAIL; critical/high defects do not pass. Reports in `.qa-skill/data/verifications/`, defects in `.qa-skill/data/defects/`.
+- `.product-squad-skill/` — what we build, for whom and why. Mandatory SDD Opportunity Research Subcycle before propose for trigger-list initiatives (`templates/sdd-opportunity-research.md` → `data/research/`).
+- `.orchestrator-skill/` — stage sequencer, handoffs, state in `.orchestrator-skill/data/state/` (read first).
+- `.security-engineer-skill/` — enterprise-level security verification; can block release on critical/high.
 
-Пайплайн: Product Squad (discovery) → CTO (делает) → QA (валидирует технику) → Product Squad (валидирует бизнес-соответствие) → Security Engineer (безопасность) — оркестрирует Orchestrator. Для всех скилов: `git pull` перед работой, commit+push после каждой значимой записи в `data/`.
+Pipeline: Product Squad (discovery) → CTO (builds) → QA (validates technique) → Product Squad (validates business fit) → Security Engineer (security) — orchestrated by Orchestrator. For all skills: `git pull` before work, commit+push after every significant write to `data/`.
 
 ## Coexistence with Other AI Tools
 
-- `.claude/`, `CLAUDE.md`, `AGENTS.md` — конфигурации других инструментов (не менять без запроса).
-- Этот файл (QWEN.md) — контекст Qwen Code.
-- Skill-директории в `.gitignore` (каждая — свой git-репо).
+- `.claude/`, `CLAUDE.md`, `AGENTS.md` — other tool configurations (do not modify without request).
+- This file (QWEN.md) — Qwen Code context.
+- Skill directories in `.gitignore` (each is its own git repo).
 
 ## Language
 
-Пользователь общается в неформальном русском. Отвечай по-русски, если не просят иначе. Технические артефакты (код, пути, команды) — на английском.
+User communicates in informal Russian. Reply in Russian unless asked otherwise. Technical artifacts (code, paths, commands) — in English.

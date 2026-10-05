@@ -1,7 +1,7 @@
 import { Wrap, Kicker, Lead, BtnPrimary, BtnGhost } from "./ui";
 import TerminalDemo from "./TerminalDemo";
 
-const chips = ["В контуре заказчика", "Строгий режим", "Локальная обработка"];
+const chips = ["On-premises", "Strict mode", "Local processing"];
 
 export default function Hero() {
   return (
@@ -13,21 +13,21 @@ export default function Hero() {
       />
       <Wrap className="relative grid items-center gap-12 py-[78px] lg:grid-cols-[1.04fr_.96fr] lg:py-[104px]">
         <div>
-          <Kicker className="text-[#8b9cff]">Безопасность рабочей станции</Kicker>
+          <Kicker className="text-[#8b9cff]">Workstation security</Kicker>
           <h1 className="mt-5 text-[clamp(38px,5.1vw,62px)] font-bold leading-[1.06] tracking-[-.035em] text-white">
-            Учётные данные остаются на рабочей станции.{" "}
-            <em className="not-italic text-[#8b9cff]">Под защитой при работе с ИИ.</em>
+            Credentials stay on the workstation.{" "}
+            <em className="not-italic text-[#8b9cff]">Protected when working with AI.</em>
           </h1>
           <Lead className="text-navy-text">
-            TechCatalyst Guard перехватывает команды терминала, ответы
-            инструментов MCP и буфер обмена — и маскирует учётные и персональные
-            данные до передачи ИИ-агенту. Централизованные политики сохраняют
-            целостность, а обработка выполняется в контуре заказчика.
+            AI Guard intercepts terminal commands, MCP tool responses and
+            clipboard — and masks credentials and PII before they reach the
+            AI agent. Centralized policies enforce governance, and all
+            processing runs on-premises.
           </Lead>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <BtnPrimary href="#pilot">Запросить пробное внедрение</BtnPrimary>
+            <BtnPrimary href="#pilot">Request a pilot deployment</BtnPrimary>
             <BtnGhost href="#pilot" dark>
-              Получить архитектуру решения
+              Get the architecture overview
             </BtnGhost>
           </div>
           <div className="mt-7 flex flex-wrap gap-2.5">

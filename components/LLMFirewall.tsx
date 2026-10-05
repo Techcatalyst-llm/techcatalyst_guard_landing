@@ -3,32 +3,31 @@ import Reveal from "./Reveal";
 
 const layers = [
   {
-    title: "Комплексная защита потоков ИИ",
+    title: "Comprehensive AI traffic protection",
     text: (
       <>
-        Защитный шлюз для большой языковой модели проверяет ввод и вывод между
-        пользователем и моделью. TechCatalyst Guard расширяет контроль на
-        терминал, MCP и буфер обмена ИИ-агентов.
+        An LLM gateway inspects input and output between the user and the model.
+        AI Guard extends that control to the terminal, MCP and clipboard
+        used by AI agents.
       </>
     ),
   },
   {
-    title: "Логика межсетевого экрана для ИИ-каналов",
+    title: "Firewall logic for AI channels",
     text: (
       <>
-        Современный межсетевой экран использует многоуровневую защиту:
-        инспекция контента, контроль действий, контекст пользователя, политики
-        доступа и аудит событий в одной цепочке исполнения.
+        A modern firewall applies layered defense: content inspection, action
+        control, user context, access policies and event audit — all in a single
+        execution chain.
       </>
     ),
   },
   {
-    title: "Контроль до ответа модели",
+    title: "Control before the model responds",
     text: (
       <>
-        Ключевой принцип: останавливать утечку в момент возникновения, до
-        попадания учётных данных, персональной информации или внутреннего
-        материала в контекст внешней модели.
+        The core principle: stop a leak at the point of origin, before
+        credentials, PII or internal material enter the external model's context.
       </>
     ),
   },
@@ -36,32 +35,32 @@ const layers = [
 
 const controls = [
   {
-    b: "Проверка запросов.",
-    text: "Проверка входящих команд, пользовательского запроса и параметров вызова инструмента на учётные данные, персональную информацию, попытки обхода политик и запрещённые классы запросов.",
+    b: "Request inspection.",
+    text: "Validate inbound commands, user prompts and tool-call parameters for credentials, PII, policy circumvention attempts and forbidden request classes.",
   },
   {
-    b: "Проверка ответов.",
-    text: "Проверка stdout/stderr, MCP-ответов и буфера обмена до передачи агенту или модели: маскирование, редактирование или блокировка.",
+    b: "Response inspection.",
+    text: "Check stdout/stderr, MCP responses and clipboard before they reach the agent or model: mask, redact or block.",
   },
   {
-    b: "Контроль действий.",
-    text: "Политики определяют допустимые команды, каталоги, узлы, ресурсы MCP и операции для конкретной роли и рабочей станции.",
+    b: "Action control.",
+    text: "Policies define permitted commands, directories, hosts, MCP resources and operations per role and workstation.",
   },
   {
-    b: "Контекстная политика.",
-    text: "Решение учитывает строку, пользователя, группу, окружение, тип учётных данных, режим станции и целевой инструмент.",
+    b: "Context-aware policy.",
+    text: "Decisions factor in the command line, user, group, environment, credential type, station mode and target tool.",
   },
   {
-    b: "Встроенный аудит.",
-    text: "В контур поступают факты и метаданные срабатывания, а исходные значения остаются на рабочей станции. Такая схема поддерживает расследование в изолированном контуре данных.",
+    b: "Built-in audit.",
+    text: "The control plane receives trigger facts and metadata; original values stay on the workstation. This supports investigation within an isolated data perimeter.",
   },
 ];
 
 const threats = [
-  "внедрение вредоносных инструкций через ответы инструментов и документы",
-  "утечка учётных данных из .env, журналов, настроек и stdout",
-  "избыточный доступ ИИ-агента к инструментам MCP",
-  "вывод данных через буфер обмена и побочные каналы",
+  "prompt injection via tool responses and documents",
+  "credential leaks from .env, logs, configs and stdout",
+  "excessive AI agent access to MCP tools",
+  "data exfiltration via clipboard and side channels",
 ];
 
 export default function LLMFirewall() {
@@ -69,12 +68,12 @@ export default function LLMFirewall() {
     <section id="llm-firewall" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Защитный контур ИИ</Kicker>
-          <H2>Многоуровневый контроль данных и действий ИИ-агентов</H2>
+          <Kicker>AI security perimeter</Kicker>
+          <H2>Layered control of AI agent data and actions</H2>
           <Lead>
-            Архитектура TechCatalyst Guard контролирует весь путь данных и
-            действий вокруг модели: запросы, команды, ответы инструментов,
-            локальные ресурсы и события аудита.
+            AI Guard's architecture controls the full data and action path
+            around the model: requests, commands, tool responses, local
+            resources and audit events.
           </Lead>
         </Reveal>
 
@@ -83,7 +82,7 @@ export default function LLMFirewall() {
             <Reveal key={item.title}>
               <Card className="h-full">
                 <span className="mb-[18px] inline-flex rounded-[10px] bg-blue-soft px-3 py-1 font-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-blue">
-                  Уровень
+                  Layer
                 </span>
                 <h3 className="mb-2 text-lg font-semibold text-[#0d1326]">{item.title}</h3>
                 <p className="text-[15px] text-muted">{item.text}</p>
@@ -96,7 +95,7 @@ export default function LLMFirewall() {
           <Reveal>
             <div className="rounded-card border border-line bg-white p-7 shadow-card">
               <h3 className="mb-4 text-[22px] font-semibold text-[#0d1326]">
-                Что делает защитный слой в контуре разработчика
+                What the security layer does inside the developer perimeter
               </h3>
               <ul className="space-y-3">
                 {controls.map((item) => (
@@ -119,7 +118,7 @@ export default function LLMFirewall() {
           <Reveal>
             <div className="rounded-card border border-line bg-white p-[26px] shadow-panel">
               <div className="mb-4 inline-flex rounded-[10px] bg-blue-soft px-3 py-1 font-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-blue">
-                Контролируемые угрозы
+                Controlled threats
               </div>
               <div className="rounded-2xl border border-line bg-soft p-5">
                 <ul className="space-y-3 text-[15px] text-muted">
@@ -133,9 +132,9 @@ export default function LLMFirewall() {
               </div>
 
               <p className="mt-5 rounded-2xl border border-line border-l-4 border-l-blue bg-white px-[22px] py-4 text-[15px] text-muted">
-                <b className="text-ink">Практический вывод:</b> полноценная защита
-                охватывает локальные команды, вызовы и ответы инструментов, запросы
-                к модели и события аудита в единой цепочке контроля.
+                <b className="text-ink">Practical takeaway:</b> full coverage
+                spans local commands, tool calls and responses, model requests
+                and audit events in a single control chain.
               </p>
             </div>
           </Reveal>

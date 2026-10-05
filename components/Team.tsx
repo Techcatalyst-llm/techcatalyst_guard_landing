@@ -3,16 +3,16 @@ import Reveal from "./Reveal";
 
 const principles = [
   {
-    title: "Продукт под руководством основателя",
-    text: "Архитектуру, модель угроз, пробные внедрения и продуктовые решения ведёт команда, которая проектирует и внедряет систему.",
+    title: "Founder-led product",
+    text: "Architecture, threat model, pilot deployments and product decisions are driven by the team that designs and ships the system.",
   },
   {
-    title: "Безопасность инструментов разработки",
-    text: "Фокус направлен на реальное поведение ИИ-агентов, терминала, инструментов MCP и рабочих станций разработчиков.",
+    title: "Developer tool security",
+    text: "Focused on real-world AI agent behavior across the terminal, MCP tools and developer workstations.",
   },
   {
-    title: "Пробное внедрение в контуре заказчика",
-    text: "Ценность подтверждается в реальном контуре, на рабочих репозиториях и по измеримым правилам приёмки.",
+    title: "Pilot in your perimeter",
+    text: "Value is proven in your environment, on real repositories, against measurable acceptance criteria.",
   },
 ];
 
@@ -21,12 +21,12 @@ export default function Team() {
     <section id="team" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Команда</Kicker>
-          <H2>Команда строит безопасность ИИ вокруг реального процесса разработки</H2>
+          <Kicker>Team</Kicker>
+          <H2>Building AI security around the real development workflow</H2>
           <Lead>
-            TechCatalyst Guard развивается как инженерный продукт безопасности: от
-            модели угроз и локального применения политик до пробных внедрений в инфраструктуре
-            заказчика.
+            AI Guard is developed as an engineering security product: from the
+            threat model and local policy enforcement to pilot deployments
+            in customer infrastructure.
           </Lead>
         </Reveal>
 
@@ -34,19 +34,20 @@ export default function Team() {
           <Reveal>
             <div className="rounded-panel border border-line bg-white p-8 shadow-panel">
               <div className="mb-3 inline-flex rounded-[10px] bg-blue-soft px-3 py-1 font-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-blue">
-                Основатель
+                Founder
               </div>
               <h3 className="text-[28px] font-semibold tracking-[-.02em] text-[#0d1326]">
-                Иван Борисов
+                Ivan Borisov
               </h3>
               <p className="mt-4 max-w-[720px] text-[16px] leading-8 text-muted">
-                Основатель TechCatalyst. Ведёт продукт, архитектуру и работу с
-                пробными внедрениями на стыке ИИ-инфраструктуры, инструментов разработки и
-                механизмов безопасности рабочих станций.
+                Founder of AI Guard. Leads product, architecture and pilot
+                engagements at the intersection of AI infrastructure, developer
+                tools and workstation security.
               </p>
               <p className="mt-4 max-w-[720px] text-[15px] leading-7 text-muted">
-                Диалог о пробном внедрении идёт напрямую с основателем, который проектирует
-                слой применения политик, модель управления и границы гарантий.
+                Pilot conversations go directly to the founder, who designs the
+                policy enforcement layer, governance model and guarantee
+                boundaries.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
@@ -55,13 +56,13 @@ export default function Team() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center rounded-[10px] bg-blue px-6 py-3 text-[14.5px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
                 >
-                  Профиль основателя
+                  Founder profile
                 </a>
                 <a
                   href="#pilot"
                   className="inline-flex items-center rounded-[10px] border border-line bg-white px-6 py-3 text-[14.5px] font-semibold text-ink transition-colors hover:border-blue hover:text-blue"
                 >
-                  Обсудить пробное внедрение
+                  Discuss a pilot
                 </a>
               </div>
             </div>

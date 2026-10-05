@@ -1,6 +1,6 @@
 # Specs — Source of Truth
 
-This directory is the **source of truth** for what the Techcatalyst Guard landing does today.
+This directory is the **source of truth** for what the AI Guard landing does today.
 
 The project follows **Spec-Driven Development (SDD)** using the
 [OpenSpec](https://github.com/Fission-AI/OpenSpec) convention:

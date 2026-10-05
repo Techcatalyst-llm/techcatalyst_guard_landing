@@ -3,20 +3,20 @@ import Reveal from "./Reveal";
 
 const points = [
   {
-    b: "Подписанные политики.",
-    text: "Каждый снапшот политики подписывается сервером и проверяется агентом локально.",
+    b: "Signed policies.",
+    text: "Every policy snapshot is signed by the server and verified by the agent locally.",
   },
   {
-    b: "Контроль целостности.",
-    text: "Ручное изменение настроек или политики обнаруживается — агент включает строгий резервный режим и сообщает событие в контур.",
+    b: "Integrity control.",
+    text: "Manual modification of settings or policy is detected — the agent engages strict fallback mode and reports the event to the control plane.",
   },
   {
-    b: "Постоянная локальная защита.",
-    text: "В строгом режиме агент и интеграции с командной оболочкой сохраняют активное состояние.",
+    b: "Persistent local protection.",
+    text: "In strict mode the agent and shell integrations maintain active enforcement state.",
   },
   {
-    b: "Минимизация телеметрии.",
-    text: "События содержат факты срабатываний, а исходные значения остаются на рабочей станции.",
+    b: "Minimal telemetry.",
+    text: "Events contain trigger facts and metadata; original values stay on the workstation.",
   },
 ];
 
@@ -25,8 +25,8 @@ export default function StrictMode() {
     <section id="strict" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap className="grid grid-cols-2 items-center gap-14 max-md:grid-cols-1">
         <Reveal>
-          <Kicker>Модель доверия</Kicker>
-          <H2>Строгий режим: постоянная защита рабочей станции</H2>
+          <Kicker>Trust model</Kicker>
+          <H2>Strict mode: persistent workstation protection</H2>
           <ul className="mt-2.5">
             {points.map((p) => (
               <li
@@ -43,14 +43,14 @@ export default function StrictMode() {
             ))}
           </ul>
           <p className="mt-6 rounded-2xl border border-line border-l-4 border-l-blue bg-white px-[22px] py-4 text-[15px] text-muted">
-            <b className="text-ink">Граница гарантий — честно.</b> Строгий режим
-            закрывает штатный обход, случайную утечку и отключение «в один
-            клик». Модель угроз отдельно фиксирует сценарии пользователя с
-            полными правами администратора. Команда заказчика может проверить
-            агент в ходе пробного внедрения и испытаний на проникновение.
+            <b className="text-ink">Honest guarantee boundary.</b> Strict mode
+            covers routine bypass, accidental leaks and one-click disablement.
+            The threat model separately documents scenarios involving a user
+            with full administrator privileges. Your team can test the agent
+            during a pilot deployment and penetration testing.
           </p>
           <div className="mt-7">
-            <BtnPrimary href="#pilot">Проверить в своём контуре</BtnPrimary>
+            <BtnPrimary href="#pilot">Test in your environment</BtnPrimary>
           </div>
         </Reveal>
         <Reveal>
@@ -69,7 +69,7 @@ export default function StrictMode() {
             <br />
             <br />
             $ vi ~/.guard/policy.json&nbsp;
-            <span className="text-amber"># попытка ручной правки</span>
+            <span className="text-amber"># manual edit attempt</span>
             <br />
             <br />
             $ guard status
@@ -77,7 +77,7 @@ export default function StrictMode() {
             &nbsp;&nbsp;integrity:{" "}
             <span className="text-danger">FAILED — snapshot tampered</span>
             <br />
-            &nbsp;&nbsp;режим: <span className="text-amber">включён строгий резервный режим</span>
+            &nbsp;&nbsp;mode: <span className="text-amber">strict fallback engaged</span>
             <br />
             &nbsp;&nbsp;event:{" "}
             <span className="text-green-deep">reported to control plane ✓</span>

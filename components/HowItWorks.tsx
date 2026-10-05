@@ -3,30 +3,28 @@ import Reveal from "./Reveal";
 
 const steps = [
   {
-    title: "Агент перехватывает",
+    title: "Agent intercepts",
     text: (
       <>
-        Локальный агент встраивается в командные оболочки <Code>zsh</Code>, <Code>bash</Code>,{" "}
-        <Code>PowerShell</Code> и перехватывает команды и потоки{" "}
-        <Code>stdout/stderr</Code> через защищённую PTY-сессию — а также
-        MCP-трафик и буфер обмена.
+        The local agent hooks into shells — <Code>zsh</Code>, <Code>bash</Code>,{" "}
+        <Code>PowerShell</Code> — and intercepts commands and <Code>stdout/stderr</Code>{" "}
+        streams via a secure PTY session, along with MCP traffic and clipboard.
       </>
     ),
   },
   {
-    title: "Политики решают",
+    title: "Policies decide",
     text: (
       <>
-        Локальный rule-based движок проверяет команду и вывод по подписанным
-        корпоративным политикам и применяет решение: <Code>allow</Code>,{" "}
-        <Code>warn</Code>, <Code>mask</Code> или <Code>block</Code> — в реальном
-        времени.
+        A local rule-based engine evaluates each command and its output against
+        signed corporate policies and applies a decision: <Code>allow</Code>,{" "}
+        <Code>warn</Code>, <Code>mask</Code> or <Code>block</Code> — in real time.
       </>
     ),
   },
   {
-    title: "События — в контур",
-    text: "Каждое срабатывание фиксируется в локальном журнале аудита и пакетами передаётся в панель управления внутри контура. Исходные значения учётных данных остаются на рабочей станции.",
+    title: "Events stay on-prem",
+    text: "Every trigger is logged in a local audit journal and shipped in batches to the admin console inside your perimeter. Original credential values never leave the workstation.",
   },
 ];
 
@@ -35,11 +33,11 @@ export default function HowItWorks() {
     <section id="how" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Как работает</Kicker>
-          <H2>Перехват — локальная проверка — аудит</H2>
+          <Kicker>How it works</Kicker>
+          <H2>Intercept — local check — audit</H2>
           <Lead>
-            Вся обработка происходит на рабочей станции. Сервер получает только
-            события аудита, а контур управления размещается в вашей инфраструктуре.
+            All processing happens on the workstation. The server receives only
+            audit events, and the control plane is deployed in your infrastructure.
           </Lead>
         </Reveal>
         <div className="mt-11 grid grid-cols-3 gap-5 max-md:grid-cols-1">

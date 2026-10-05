@@ -5,25 +5,25 @@ import { Wrap, Kicker, H2, Lead } from "./ui";
 import Reveal from "./Reveal";
 
 const includes = [
-  "Развёртывание серверной части в контуре заказчика",
-  "Подключение пробной группы рабочих станций",
-  "Измерение качества детектирования на ваших репозиториях",
-  "Критерии приёмки и границы гарантий фиксируем письменно до старта",
-  "Архитектурная схема, расчёт ресурсов и требования к развёртыванию",
-  "Технологическая самостоятельность: контур, данные и агенты остаются под вашим контролем",
+  "Server stack deployed in your perimeter",
+  "Pilot group of workstations connected",
+  "Detection quality measured on your repositories",
+  "Acceptance criteria and guarantee boundaries documented before kickoff",
+  "Architecture diagram, resource sizing and deployment requirements",
+  "Operational independence: perimeter, data and agents stay under your control",
 ];
 
-const CONTACT = "info@2rm.ru";
+const CONTACT = "tanya@ai-guard.pro";
 
 export default function Pilot() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const body = encodeURIComponent(
-      `Имя: ${fd.get("name")}\nКомпания: ${fd.get("company")}\nE-mail: ${fd.get("email")}\n\n${fd.get("msg")}`
+      `Name: ${fd.get("name")}\nCompany: ${fd.get("company")}\nE-mail: ${fd.get("email")}\n\n${fd.get("msg")}`
     );
     window.location.href = `mailto:${CONTACT}?subject=${encodeURIComponent(
-      "Заявка на пробное внедрение TechCatalyst Guard"
+      "AI Guard pilot request"
     )}&body=${body}`;
   };
 
@@ -34,12 +34,12 @@ export default function Pilot() {
     <section id="pilot" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap className="grid grid-cols-2 gap-14 max-md:grid-cols-1">
         <Reveal>
-          <Kicker>Пробное внедрение</Kicker>
-          <H2>Проверьте на своих репозиториях и своём контуре</H2>
+          <Kicker>Pilot deployment</Kicker>
+          <H2>Test on your repositories and your infrastructure</H2>
           <Lead>
-            TechCatalyst Guard проходит стадию корпоративных пробных внедрений. Мы
-            разворачиваем решение в вашей инфраструктуре и вместе измеряем
-            результат на рабочем репозитории.
+            AI Guard is in the corporate pilot phase. We deploy the solution
+            in your infrastructure and measure results together on a live
+            repository.
           </Lead>
           <ul className="mt-[22px]">
             {includes.map((it) => (
@@ -59,39 +59,39 @@ export default function Pilot() {
           >
             <div className="mb-4">
               <label htmlFor="f-name" className="mb-[7px] block text-[13.5px] font-medium text-muted">
-                Имя
+                Name
               </label>
-              <input id="f-name" name="name" type="text" required autoComplete="name" placeholder="Иван Петров" className={field} />
+              <input id="f-name" name="name" type="text" required autoComplete="name" placeholder="John Smith" className={field} />
             </div>
             <div className="mb-4">
               <label htmlFor="f-company" className="mb-[7px] block text-[13.5px] font-medium text-muted">
-                Компания
+                Company
               </label>
-              <input id="f-company" name="company" type="text" required autoComplete="organization" placeholder="ООО «Компания»" className={field} />
+              <input id="f-company" name="company" type="text" required autoComplete="organization" placeholder="Acme Inc." className={field} />
             </div>
             <div className="mb-4">
               <label htmlFor="f-email" className="mb-[7px] block text-[13.5px] font-medium text-muted">
-                Рабочий e-mail
+                Work e-mail
               </label>
-              <input id="f-email" name="email" type="email" required autoComplete="email" placeholder="name@company.ru" className={field} />
+              <input id="f-email" name="email" type="email" required autoComplete="email" placeholder="name@company.com" className={field} />
             </div>
             <div className="mb-4">
               <label htmlFor="f-msg" className="mb-[7px] block text-[13.5px] font-medium text-muted">
-                Комментарий
+                Comment
               </label>
-              <textarea id="f-msg" name="msg" placeholder="Размер команды разработки, интересующие сценарии…" className={`${field} min-h-[88px] resize-y`} />
+              <textarea id="f-msg" name="msg" placeholder="Team size, scenarios of interest..." className={`${field} min-h-[88px] resize-y`} />
             </div>
             <button
               type="submit"
               className="w-full rounded-[10px] bg-blue px-7 py-[15px] text-base font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-blue-bright hover:shadow-cta"
             >
-              Запросить пробное внедрение
+              Request a pilot
             </button>
             <p className="mt-3.5 text-center text-[13.5px] text-dim">
-              Локальная архитектура: данные пробного внедрения остаются в вашей инфраструктуре
+              On-premises architecture: pilot data stays in your infrastructure
             </p>
             <p className="mt-2 text-center text-sm text-dim">
-              или напишите нам:{" "}
+              or email us directly:{" "}
               <a href={`mailto:${CONTACT}`} className="text-blue hover:underline">
                 {CONTACT}
               </a>

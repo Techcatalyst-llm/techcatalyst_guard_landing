@@ -1,31 +1,29 @@
 import { Wrap, Kicker, H2, Lead, Card } from "./ui";
 import Reveal from "./Reveal";
 
-// Статус сертификации и сроки требуют подтверждения перед публикацией.
-// Текущий статус: заявки в реестр отечественного ПО и ФСТЭК находятся в процессе.
 const pillars = [
   {
-    title: "Проверяемое детектирование",
+    title: "Verifiable detection",
     items: [
-      "Точность и полноту измеряем на ваших репозиториях, метрики воспроизводимы",
-      "Пороги и категории настраиваются, правила исключений входят в систему",
-      "Итоговый отчёт по пробному внедрению содержит измеренные показатели",
+      "Accuracy and recall measured on your repositories; metrics are reproducible",
+      "Thresholds and categories are configurable; suppression rules are part of the system",
+      "Pilot summary report includes measured indicators",
     ],
   },
   {
-    title: "Данные и соответствие (РФ)",
+    title: "Data and privacy",
     items: [
-      "Данные размещаются в вашем контуре и российской юрисдикции",
-      "Телеметрия содержит категории и факты срабатываний, исходные значения остаются на станции",
-      "Реестр отечественного ПО и сертификация ФСТЭК — заявка в процессе, статус по запросу",
+      "Data is deployed in your perimeter",
+      "Telemetry contains trigger categories and facts; original values stay on the workstation",
+      "Full control over data retention and access",
     ],
   },
   {
-    title: "Непрерывность поставщика",
+    title: "Vendor continuity",
     items: [
-      "Решение работает автономно в вашем контуре",
-      "Локальный контур сохраняет работоспособность при любом статусе внешних сервисов",
-      "Депонирование исходного кода доступно по запросу через независимого агента",
+      "The solution runs autonomously in your perimeter",
+      "Local perimeter stays operational regardless of external service availability",
+      "Source code escrow available on request through an independent agent",
     ],
   },
 ];
@@ -35,11 +33,11 @@ export default function Assurance() {
     <section id="assurance" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Доверие и проверяемость</Kicker>
-          <H2>Ответы на вопросы корпоративной технической проверки</H2>
+          <Kicker>Trust and verifiability</Kicker>
+          <H2>Answers for enterprise technical due diligence</H2>
           <Lead>
-            TechCatalyst Guard находится на стадии корпоративных пробных внедрений. Статус
-            продукта, архитектуру, метрики и границы гарантий раскрываем заранее.
+            AI Guard is in the corporate pilot phase. Product status,
+            architecture, metrics and guarantee boundaries are disclosed upfront.
           </Lead>
         </Reveal>
         <div className="mt-11 grid grid-cols-3 gap-5 max-md:grid-cols-1">

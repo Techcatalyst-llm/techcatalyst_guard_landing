@@ -3,19 +3,19 @@ import Reveal from "./Reveal";
 
 const stages = [
   {
-    tag: "Сейчас",
-    title: "Контроль рабочей станции",
-    text: "Терминал, MCP, буфер обмена и репозитории — под корпоративными политиками. Секреты и ПДн маскируются до передачи ИИ-агенту.",
+    tag: "Now",
+    title: "Workstation control",
+    text: "Terminal, MCP, clipboard and repositories governed by corporate policies. Secrets and PII masked before reaching the AI agent.",
   },
   {
-    tag: "Далее",
-    title: "LLM Firewall в шлюзе",
-    text: "Инспекция запросов и ответов моделей в точке data-path. Prompt injection, jailbreak, утечки данных — под контролем. Для клиентов Takt включается без изменения интеграции.",
+    tag: "Next",
+    title: "LLM Firewall at the gateway",
+    text: "Inspect model requests and responses at the data-path entry point. Prompt injection, jailbreak and data leaks under control. Enabled for existing clients without integration changes.",
   },
   {
-    tag: "Потом",
-    title: "Red Teaming и комплаенс",
-    text: "Автоматическое тестирование атаками, комплаенс-отчётность для ФСТЭК и ЦБ, интеграция с SIEM и SOC.",
+    tag: "Later",
+    title: "Red teaming and compliance",
+    text: "Automated attack-based testing, compliance reporting, SIEM and SOC integration.",
   },
 ];
 
@@ -24,12 +24,12 @@ export default function Roadmap() {
     <section id="roadmap" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Дорожная карта</Kicker>
-          <H2>Что дальше: LLM Firewall в шлюзе TechCatalyst</H2>
+          <Kicker>Roadmap</Kicker>
+          <H2>What's next: LLM Firewall at the AI Guard gateway</H2>
           <Lead>
-            TechCatalyst Guard развивается от контроля рабочей станции к
-            полноценному защитному контуру ИИ-трафика. Следующий этап — инспекция
-            запросов и ответов моделей непосредственно в шлюзе TechCatalyst.
+            AI Guard evolves from workstation control to a full AI traffic
+            security perimeter. The next stage is inspecting model requests
+            and responses directly at the gateway.
           </Lead>
         </Reveal>
         <div className="mt-11 grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">

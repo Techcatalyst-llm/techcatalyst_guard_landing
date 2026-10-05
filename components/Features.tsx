@@ -4,33 +4,33 @@ import Reveal from "./Reveal";
 const features = [
   {
     ico: "$",
-    title: "Защита терминала",
-    text: "Потоковое маскирование stdout/stderr в реальном времени. Вывод сохраняет читаемость, а учётные данные заменяются безопасными масками.",
+    title: "Terminal protection",
+    text: "Real-time streaming mask of stdout/stderr. Output stays readable while credentials are replaced with safe masks.",
   },
   {
     ico: "⇄",
-    title: "Защита MCP",
-    text: "Локальный посредник проверяет запросы JSON-RPC, блокирует доступ к запрещённым ресурсам и маскирует ответы с сохранением корректной работы протокола.",
+    title: "MCP protection",
+    text: "Local intermediary validates JSON-RPC requests, blocks access to forbidden resources and masks responses while keeping the protocol functional.",
   },
   {
     ico: "⧉",
-    title: "Защита буфера обмена",
-    text: "Фоновый наблюдатель находит секреты в скопированном тексте, подменяет их маской и уведомляет пользователя.",
+    title: "Clipboard protection",
+    text: "Background watcher finds secrets in copied text, replaces them with a mask and notifies the user.",
   },
   {
     ico: "⌕",
-    title: "Сканер репозиториев",
-    text: "Локальный поиск секретов и PII в рабочей копии кода: категоризированные отчёты, suppression-правила, воспроизводимые метрики.",
+    title: "Repository scanner",
+    text: "Local search for secrets and PII in the working copy: categorized reports, suppression rules, reproducible metrics.",
   },
   {
     ico: "§",
-    title: "Централизованные политики",
-    text: "Жизненный цикл «черновик → проверка → публикация», версионирование, область действия по пользователям, группам и рабочим станциям, централизованное распространение.",
+    title: "Centralized policies",
+    text: "Draft → review → publish lifecycle, versioning, scope by users, groups and workstations, centralized distribution.",
   },
   {
     ico: "▦",
-    title: "Панель администратора",
-    text: "Реестр рабочих станций, контроль их состояния, таблица событий безопасности, редактор политик, метрики и управление лицензиями через единый интерфейс.",
+    title: "Admin console",
+    text: "Workstation registry, health monitoring, security event log, policy editor, metrics and license management in a single interface.",
   },
 ];
 
@@ -39,8 +39,8 @@ export default function Features() {
     <section id="features" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Возможности</Kicker>
-          <H2>Один агент — все каналы утечки</H2>
+          <Kicker>Features</Kicker>
+          <H2>One agent — all leak channels</H2>
         </Reveal>
         <div className="mt-11 grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
           {features.map((f) => (

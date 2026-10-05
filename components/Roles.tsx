@@ -3,27 +3,27 @@ import Reveal from "./Reveal";
 
 const roles = [
   {
-    title: "Руководитель ИБ",
+    title: "CISO / Security Lead",
     items: [
-      "Централизованные политики с областью действия по группам",
-      "Все инциденты маскирования и блокировок — в одной панели",
-      "Доказуемая целостность: подписи, tamper-события, аудит",
+      "Centralized policies scoped to groups and workstations",
+      "All masking and blocking incidents in a single console",
+      "Verifiable integrity: signatures, tamper events, audit trail",
     ],
   },
   {
-    title: "Платформенная команда",
+    title: "Platform team",
     items: [
-      "Подъём контура по документированному Compose-сценарию",
-      "Раскатка агентов через привычный MDM-процесс",
-      "Диагностика через интерфейсы проверки состояния и журналы",
+      "Stand up the perimeter using a documented Compose stack",
+      "Roll out agents through your existing MDM process",
+      "Diagnose via health-check endpoints and structured logs",
     ],
   },
   {
-    title: "Разработчик",
+    title: "Developer",
     items: [
-      "Привычный терминал и инструменты сохраняют рабочий процесс",
-      "Локальная обработка поддерживает привычную скорость",
-      "Маскирование фокусирует контроль на данных и сохраняет приватность сотрудников",
+      "Familiar terminal and tools — workflow stays intact",
+      "Local processing keeps the terminal responsive",
+      "Masking focuses enforcement on data while preserving developer privacy",
     ],
   },
 ];
@@ -33,8 +33,8 @@ export default function Roles() {
     <section id="roles" className="border-y border-line bg-soft py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Для кого</Kicker>
-          <H2>Каждой роли — своя ценность</H2>
+          <Kicker>Who benefits</Kicker>
+          <H2>Value for every role</H2>
         </Reveal>
         <div className="mt-11 grid grid-cols-3 gap-5 max-md:grid-cols-1">
           {roles.map((r) => (

@@ -1,29 +1,6 @@
 import { Wrap, Kicker, H2, Lead, Card } from "./ui";
 import Reveal from "./Reveal";
 
-const namedClients = [
-  {
-    name: "ООО МВС",
-    work: "услуги по предоставлению удалённого доступа к большим языковым моделям",
-    period: "06.2025 — настоящее время",
-  },
-  {
-    name: "Альфа Консалт",
-    work: "разработка и внедрение AI-модели для анализа и поиска судебной практики по юридическим делам",
-    period: "05.2023 — 06.2024",
-  },
-  {
-    name: "Криптон Студио",
-    work: "разработка API для процессинга финансовых продуктов клиента",
-    period: "01.2023 — 11.2024",
-  },
-  {
-    name: "3Commas",
-    work: "разработка БД распределённого реестра и API для интеграции",
-    period: "10.2021 — 04.2023",
-  },
-];
-
 const ndaClients = [
   "AdSkill / AdWave LTD",
   "Adsterra / AD Market Limited",
@@ -35,36 +12,23 @@ export default function Clients() {
     <section id="clients" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal>
-          <Kicker>Клиенты и опыт</Kicker>
-          <H2>Команда опирается на практический опыт внедрения</H2>
+          <Kicker>Track record</Kicker>
+          <H2>Built on real-world deployment experience</H2>
           <Lead>
-            Команда TechCatalyst работает с корпоративными заказчиками в телекоме,
-            финтехе, adtech и консалтинге. Часть проектов выполнена по NDA.
+            The team behind AI Guard has delivered enterprise projects
+            in telecom, fintech, adtech and consulting. Some engagements
+            are covered by NDAs.
           </Lead>
         </Reveal>
 
-        <div className="mt-11 grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
-          {namedClients.map((client) => (
-            <Reveal key={client.name}>
-              <Card className="h-full">
-                <div className="mb-3 font-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] before:mr-2 before:content-['//'] text-blue">
-                  {client.period}
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-[#0d1326]">{client.name}</h3>
-                <p className="text-[15px] text-muted">{client.work}</p>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-5 grid grid-cols-[1.05fr_.95fr] gap-5 max-lg:grid-cols-1">
+        <div className="mt-11 grid grid-cols-2 gap-5 max-lg:grid-cols-1">
           <Reveal>
             <div className="rounded-card border border-line bg-white p-7 shadow-card">
-              <h3 className="mb-3 text-[20px] font-semibold text-[#0d1326]">Проекты по соглашениям о конфиденциальности</h3>
+              <h3 className="mb-3 text-[20px] font-semibold text-[#0d1326]">NDA-protected projects</h3>
               <p className="mb-4 text-[15px] text-muted">
-                Часть проектов ИИ и инфраструктуры промежуточного доступа защищена соглашениями
-                о конфиденциальности. Публичный список содержит названия компаний,
-                а детали внедрения сохраняются в рамках договорных условий.
+                Some AI and middleware infrastructure engagements are covered by
+                non-disclosure agreements. Company names are listed publicly;
+                implementation details remain within contractual boundaries.
               </p>
               <ul className="space-y-3">
                 {ndaClients.map((name) => (
@@ -81,19 +45,19 @@ export default function Clients() {
 
           <Reveal>
             <div className="rounded-card border border-line bg-white p-7 shadow-card">
-              <h3 className="mb-3 text-[20px] font-semibold text-[#0d1326]">Какие задачи уже делали</h3>
+              <h3 className="mb-3 text-[20px] font-semibold text-[#0d1326]">Engagements delivered</h3>
               <ul className="space-y-3 text-[15px] text-muted">
                 <li className="relative pl-[22px] before:absolute before:left-0 before:top-[7px] before:font-bold before:text-green before:content-['✓']">
-                  доступ к LLM и proxy-инфраструктура для работы с AI-моделями
+                  LLM access and proxy infrastructure for AI model operations
                 </li>
                 <li className="relative pl-[22px] before:absolute before:left-0 before:top-[7px] before:font-bold before:text-green before:content-['✓']">
-                  API-слой для интеграции и маршрутизации AI- и fintech-нагрузки
+                  API layer for AI and fintech workload integration and routing
                 </li>
                 <li className="relative pl-[22px] before:absolute before:left-0 before:top-[7px] before:font-bold before:text-green before:content-['✓']">
-                  прикладные AI-модели под конкретные отраслевые use cases
+                  Applied AI models for domain-specific use cases
                 </li>
                 <li className="relative pl-[22px] before:absolute before:left-0 before:top-[7px] before:font-bold before:text-green before:content-['✓']">
-                  проекты, где важны контроль доступа, трассируемость и работа с чувствительными данными
+                  Projects requiring access control, traceability and sensitive data handling
                 </li>
               </ul>
             </div>

@@ -3,41 +3,41 @@ import Reveal from "./Reveal";
 
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
-    q: "Где размещаются данные?",
-    a: "Серверная часть, база данных и все события размещаются в инфраструктуре заказчика. Телеметрия содержит только факты срабатываний и категории данных, а исходные значения остаются на рабочей станции.",
+    q: "Where is data stored?",
+    a: "The server stack, database and all events are deployed in your infrastructure. Telemetry contains only trigger facts and data categories; original values stay on the workstation.",
   },
   {
-    q: "Как защита сохраняет активный режим?",
-    a: "В строгом режиме агент, интеграции с командной оболочкой и политики защищены от отключения и ручной подмены. Попытка изменения настроек фиксируется, после чего агент включает резервный защитный режим. Для менее критичных групп доступен гибкий режим с локальным переключателем.",
+    q: "How does protection stay active?",
+    a: "In strict mode the agent, shell integrations and policies are protected against disabling and manual tampering. Modification attempts are detected, and the agent engages a fallback protection mode. Less critical groups can use a flexible mode with a local toggle.",
   },
   {
-    q: "Какие операционные системы и командные оболочки поддерживаются?",
+    q: "Which operating systems and shells are supported?",
     a: (
       <>
-        Пробный контур: macOS и Linux с <Code>zsh</Code> и <Code>bash</Code>.
-        Поддержка PowerShell и полный Windows-контур — целевой срок Q4 2026.
+        Pilot perimeter: macOS and Linux with <Code>zsh</Code> and <Code>bash</Code>.
+        PowerShell support and full Windows perimeter targeted for Q4 2026.
       </>
     ),
   },
   {
-    q: "Это замедлит работу в терминале?",
-    a: "Обработка выполняется локально по правилам и регулярным выражениям. Сетевые обращения находятся за пределами критического пути, поэтому терминал сохраняет привычную скорость. Защита продолжает работу автономно при любом состоянии сервера.",
+    q: "Will this slow down terminal work?",
+    a: "Processing runs locally using rules and regular expressions. Network calls are off the critical path, so the terminal stays responsive. Protection continues autonomously regardless of server availability.",
   },
   {
-    q: "Как разворачивается серверная часть?",
-    a: "Docker Compose с PostgreSQL разворачивается платформенной командой по документированному сценарию. Предоставляем архитектурную схему, расчёт ресурсов и регламент эксплуатации, включая резервное копирование и восстановление.",
+    q: "How is the server stack deployed?",
+    a: "Docker Compose with PostgreSQL is deployed by your platform team using a documented runbook. We provide an architecture diagram, resource sizing and operational procedures including backup and restore.",
   },
   {
-    q: "Чем это отличается от DLP или секрет-сканера?",
-    a: "Классическая система предотвращения утечек контролирует сеть и периметр, а сканеры анализируют код в репозитории. TechCatalyst Guard добавляет контроль точки исполнения: команд и их вывода на рабочей станции, где данные поступают в ИИ-инструменты. Сканер репозиториев входит в продукт как вспомогательный контур.",
+    q: "How is this different from DLP or a secret scanner?",
+    a: "Traditional DLP controls the network and perimeter; scanners analyze code in the repository. AI Guard adds control at the point of execution — commands and their output on the workstation, where data enters AI tools. A repository scanner is included as a complementary layer.",
   },
   {
-    q: "Как обеспечивается непрерывность работы продукта?",
-    a: "Решение разворачивается полностью в вашем контуре и работает автономно. Для критичных внедрений доступно депонирование исходного кода у независимого агента с передачей заказчику при наступлении согласованных условий.",
+    q: "How is product continuity ensured?",
+    a: "The solution is deployed entirely in your perimeter and operates autonomously. For critical deployments, source code escrow is available through an independent agent, released to the customer upon agreed conditions.",
   },
   {
-    q: "Где хранятся данные и есть ли сертификация?",
-    a: "Серверная часть и все данные размещаются в инфраструктуре заказчика и российской юрисдикции. Заявки на включение в реестр отечественного ПО и сертификацию ФСТЭК находятся в процессе; актуальный статус предоставим по запросу.",
+    q: "Where is data hosted?",
+    a: "The server stack and all data are deployed in your infrastructure. You maintain full control over data retention, access and jurisdiction.",
   },
 ];
 
@@ -46,8 +46,8 @@ export default function Faq() {
     <section id="faq" className="py-[82px] lg:py-[100px]">
       <Wrap>
         <Reveal className="text-center">
-          <Kicker>Вопросы и ответы</Kicker>
-          <H2>Частые вопросы</H2>
+          <Kicker>FAQ</Kicker>
+          <H2>Frequently asked questions</H2>
         </Reveal>
         <Reveal className="mx-auto mt-11 max-w-[800px]">
           {faqs.map((f) => (

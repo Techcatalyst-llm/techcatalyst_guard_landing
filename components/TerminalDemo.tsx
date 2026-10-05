@@ -33,14 +33,14 @@ const SCRIPT: Line[] = [
   },
   {
     t: "status",
-    text: "▲ guard: 3 секрета замаскированы · policy corp-default v12 · событие отправлено",
+    text: "▲ guard: 3 secrets masked · policy corp-default v12 · event reported",
   },
   { t: "gap" },
   { t: "cmd", text: "tail -n2 users.log" },
   {
     t: "out",
     text: "login ok · ",
-    secret: "ivanov@corp.ru",
+    secret: "john@corp.com",
     mask: "[MASKED:EMAIL]",
     tail: " · ip 10.2.14.8",
   },
@@ -53,7 +53,7 @@ const SCRIPT: Line[] = [
   },
   {
     t: "status",
-    text: "▲ guard: PII замаскированы в потоке вывода · mode=strict",
+    text: "▲ guard: PII masked in output stream · mode=strict",
   },
 ];
 
@@ -156,7 +156,7 @@ export default function TerminalDemo() {
         <i className="block h-[11px] w-[11px] rounded-full bg-[#f1645a]" />
         <i className="block h-[11px] w-[11px] rounded-full bg-[#f5b73d]" />
         <i className="block h-[11px] w-[11px] rounded-full bg-[#35c84a]" />
-        <span className="ml-2 font-sans text-xs text-[#6a74a3]">защищённый терминал — агент Guard v1.0</span>
+        <span className="ml-2 font-sans text-xs text-[#6a74a3]">protected terminal — Guard agent v1.0</span>
       </div>
       <div
         ref={bodyRef}
