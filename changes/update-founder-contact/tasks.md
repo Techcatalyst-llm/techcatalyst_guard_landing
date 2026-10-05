@@ -10,4 +10,4 @@
 ## 2. Verification and deployment
 
 - [x] Build the landing and verify public content.
-- [ ] Deploy the updated `ai-guard-pro` process.
+- [x] Deploy the updated `ai-guard-pro` process.
