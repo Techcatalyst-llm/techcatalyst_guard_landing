@@ -25,6 +25,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="describedby" href="/llms.txt" />
+      </head>
       <body>
         {children}
         <Script id="yandex-metrika" strategy="afterInteractive">
