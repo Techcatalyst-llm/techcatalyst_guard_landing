@@ -2,6 +2,8 @@
 
 > AI Guard helps security teams protect developer workstations used with AI coding agents. It applies local policies to sensitive data before terminal output, clipboard contents or tool results reach a model.
 
+The TechCatalyst brand name is written “Техкаталист” in Russian.
+
 ## Workstation security
 
 - [Workstation controls](https://ai-guard.pro/#features): How AI Guard masks credentials and personally identifiable information and controls tools connected through the Model Context Protocol (MCP).
