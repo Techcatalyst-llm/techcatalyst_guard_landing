@@ -1,0 +1,14 @@
+# AI Guard
+
+> AI Guard helps security teams protect developer workstations used with AI coding agents. It applies local policies to sensitive data before terminal output, clipboard contents or tool results reach a model.
+
+## Workstation security
+
+- [Workstation controls](https://ai-guard.pro/#features): How AI Guard masks credentials and personally identifiable information and controls tools connected through the Model Context Protocol (MCP).
+- [How local enforcement works](https://ai-guard.pro/#how): Where data is checked on the workstation and how security teams can audit policy decisions.
+- [Product roadmap](https://ai-guard.pro/#roadmap): Workstation controls available for the pilot and planned gateway inspection of LLM requests and responses.
+
+## Enterprise evaluation
+
+- [On-premises deployment](https://ai-guard.pro/#deploy): Deployment options for running AI Guard inside the customer's infrastructure.
+- [Corporate pilot](https://ai-guard.pro/#pilot): How to request a pilot and evaluate the controls with a development team.
